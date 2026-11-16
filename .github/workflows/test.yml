@@ -1,0 +1,18 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  package-helper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run helper tests
+        run: python -m unittest discover -s tests -v
+      - name: Check script entry point
+        run: python skills/xiaohongshu-draft/scripts/package_draft.py --help

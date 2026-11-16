@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书图文草稿"
+  short_description: "Prepare Xiaohongshu image posts and verify saved drafts"
+  default_prompt: "Use $xiaohongshu-draft to prepare my text and images as a Xiaohongshu draft and verify it is saved without publishing."
